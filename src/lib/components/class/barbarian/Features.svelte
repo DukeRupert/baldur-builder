@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Proficiencies from '../components/Proficiencies.svelte';
 	import Action from '../components/Action.svelte';
+	import Feat from '../components/Feat.svelte';
 	import Subclass from './components/Subclass.svelte';
 	import { BARBARIAN } from './constants';
 	import type { Feature } from '$lib/types';
@@ -13,7 +14,8 @@
 	const options = [
 		{ type: 'proficiencies', component: Proficiencies },
 		{ type: 'action', component: Action },
-		{ type: 'subclass', component: Subclass }
+		{ type: 'subclass', component: Subclass },
+		{ type: 'feat', component: Feat }
 	];
 
 	let component = options.find((val) => val.type === type)?.component;

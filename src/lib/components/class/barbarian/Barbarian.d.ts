@@ -1,8 +1,14 @@
 // Barbarian.ts
-import type { playerClass } from '$lib/types';
+import type { Feature, playerClass } from '$lib/types';
 
 interface BarbarianClass extends playerClass {
-	subClass: Record<SubClasses, any>;
+	subClass: Record<BarbarianSubClasses, BerserkerClass>;
 }
 
-export type SubClasses = 'berserker' | 'wildheart';
+export type BarbarianSubClasses = 'berserker' | 'wildheart';
+
+interface BerserkerClass {
+	name: string;
+	description: string;
+	features: Feature[];
+}

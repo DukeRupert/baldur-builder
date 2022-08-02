@@ -1,11 +1,6 @@
 <script lang="ts">
 	//Todo
-	import {
-		totalAllocatedPoints,
-		abilityPoints,
-		primaryClass,
-		subClass
-	} from '$lib/stores/character';
+	import { totalAllocatedPoints, abilityPoints } from '$lib/stores/character';
 	import { AbilityOptions } from '$lib/constants';
 
 	import ClassPicker from '$lib/components/ClassPicker.svelte';
@@ -13,8 +8,6 @@
 	import BackgroundPicker from '$lib/components/BackgroundPicker.svelte';
 	import AbilityPicker from '$lib/components/AbilityPicker.svelte';
 	import Class from '$lib/components/class/Class.svelte';
-
-	$: console.log(`${$primaryClass} - ${$subClass}`);
 </script>
 
 <div class="w-screen h-full">

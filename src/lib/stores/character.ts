@@ -1,6 +1,14 @@
 import { writable, derived, type Writable, type Readable } from 'svelte/store';
 import { RACE, BASE_ABILITY_SCORE, MAX_BASE_ABILITY_SCORE, AbilityOptions } from '$lib/constants';
-import type { PrimaryClasses, Race, Background, Ability } from '$lib/types';
+import type { PrimaryClasses, Race, Background, Ability, Feat } from '$lib/types';
+
+export const firstFeat: Writable<Feat> = writable({
+	id: 1,
+	name: 'ability improvement',
+	description:
+		'+2 Ability points to spend as the player sees fit between Strength, Dexterity, Constitution, Intelligence, Charisma and Wisdom.',
+	classes: 'all'
+});
 
 export const primaryClass: Writable<PrimaryClasses> = writable('fighter');
 

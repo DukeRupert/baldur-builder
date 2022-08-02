@@ -1,4 +1,4 @@
-// data/types.ts
+// data/types.tss
 export interface Cantrip {
 	name: string;
 	description: string;
@@ -65,10 +65,6 @@ export type PrimaryClasses =
 	| 'sorcerer'
 	| 'barbarian'
 	| 'bard';
-
-export interface SubClass {
-	title: string;
-}
 
 export type Race =
 	| 'human'
@@ -142,3 +138,35 @@ export interface BackgroundDetails {
 export type ArmorProficiency = 'light' | 'medium' | 'heavy' | 'shield';
 
 export type WeaponProficiency = 'simple' | 'martial';
+
+export type Feats =
+	| 'ABILITY_IMPROVEMENT'
+	| 'ATHLETE'
+	| 'DEFENSIVE_DUELIST'
+	| 'DUAL_WIELDER'
+	| 'GREAT_WEAPON_MASTER'
+	| 'HEAVILY_ARMOURED'
+	| 'LIGHTLY_ARMOURED'
+	| 'MAGIC_INITIATE_BARD'
+	| 'MAGIC_INITIATE_CLERIC'
+	| 'MAGIC_INITIATE_DRUID'
+	| 'MAGIC_INITIATE_SORCERER'
+	| 'MAGIC_INITIATE_WARLOCK'
+	| 'MAGIC_INITIATE_WIZARD'
+	| 'MARTIAL_ADEPT'
+	| 'MOBILE'
+	| 'MODERATELY_ARMOURED'
+	| 'SHIELD_MASTER'
+	| 'SKILLED'
+	| 'TOUGH'
+	| 'WEAPON_MASTER';
+
+export interface Feat {
+	id?: number;
+	name: string;
+	description: string;
+	classes: PrimaryClasses | 'all';
+	requirements?: {
+		armorProfs: ArmorProficiency;
+	};
+}

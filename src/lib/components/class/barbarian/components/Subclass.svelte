@@ -1,13 +1,13 @@
 <script lang="ts">
 	import type { Feature } from '$lib/types';
-	import type { SubClasses } from '../Barbarian';
+	import type { BarbarianSubClasses } from '../Barbarian';
 	import { subClass } from '$lib/stores/character';
 	import type { BarbarianClass } from '../Barbarian';
 
 	export let feature: Feature;
 	export let primaryClass: BarbarianClass;
-	const SubClassOptions = Object.keys(primaryClass.subClass) as SubClasses[];
-	let choice: SubClasses = SubClassOptions[0];
+	const SubClassOptions = Object.keys(primaryClass.subClass) as BarbarianSubClasses[];
+	let choice: BarbarianSubClasses = SubClassOptions[0];
 	let description = primaryClass.subClass[choice].description;
 
 	function handleChange() {

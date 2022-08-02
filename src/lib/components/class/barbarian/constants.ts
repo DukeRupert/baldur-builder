@@ -3,13 +3,53 @@ import type { BarbarianClass } from './Barbarian';
 export const BERSERKER = {
 	name: 'berserker',
 	description:
-		'Violence is both a means and an end. You follow a path of untrammeled fury, slick with blood, as you thrill in the chaos of battle, heedless of your own well-being.'
+		'Violence is both a means and an end. You follow a path of untrammeled fury, slick with blood, as you thrill in the chaos of battle, heedless of your own well-being.',
+	features: [
+		{
+			level: 3,
+			type: 'action',
+			name: 'frenzy',
+			description:
+				"Your Rage turns into a frenzy as you release your unquenchable fury and bloodlust. You gain the use of Frenzied Strike and Enraged Throw. You can also make an Improvised Weapon Attack as a bonus action.Frenzy ends early if you haven't attacked a creature or taken damage since your last turn. barbarian frenzy bg3 wiki guide 45xLasts 10 turns."
+		},
+		{
+			level: 3,
+			type: 'action',
+			actionType: 'bonus',
+			name: 'frenzied strike',
+			description:
+				'As a bonus action, make a melee attack with your equipped weapon, dealing Weapon Damage slashing damage. Available only when Frenzied.'
+		},
+		{
+			level: 3,
+			type: 'action',
+			actionType: 'bonus',
+			name: 'enraged throw',
+			description:
+				'Pick up an item or creature and throws it at a target, dealing Bludgeoning damage and knocking it Prone.The damage depends on your strength and the weight of the item. Your Strength also affects how much weight you can throw. Available only when Frenzied.'
+		},
+		{
+			level: 4,
+			type: 'feat',
+			name: 'Feat',
+			description:
+				'Feats are special talents or expertises that provide special capabilities to characters.'
+		}
+	]
 };
 
 export const WILDHEART = {
 	name: 'wildheart',
 	description:
-		'Your attunement with nature and its beasts inspires your rage, empowering you with supernatural might.'
+		'Your attunement with nature and its beasts inspires your rage, empowering you with supernatural might.',
+	features: [
+		{
+			level: 3,
+			type: 'action',
+			name: 'speak with animals',
+			description: 'Grants you the level 1 Divination Spell.'
+		}
+	]
 };
 
 export const BARBARIAN: BarbarianClass = {

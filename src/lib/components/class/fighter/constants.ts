@@ -88,6 +88,13 @@ export const FIGHTER: FighterClass = {
 			name: 'martial archetype',
 			description:
 				'You choose an archetype that you strive to emulate in your combat styles and techniques.'
+		},
+		{
+			level: 4,
+			type: 'feat',
+			name: 'Feat',
+			description:
+				'Feats are special talents or expertises that provide special capabilities to characters.'
 		}
 	]
 };
