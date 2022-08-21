@@ -10,7 +10,7 @@
 	import Class from '$lib/components/class/Class.svelte';
 </script>
 
-<div class="w-screen h-full">
+<div>
 	<div class="flex flex-col gap-y-4 px-4 py-8">
 		<ClassPicker />
 		<RacePicker />
