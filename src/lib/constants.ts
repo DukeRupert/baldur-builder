@@ -1,5 +1,7 @@
 // constants.ts
-import type { Background, BackgroundDetails, PrimaryClasses, SubClass } from './types';
+import type { Background, BackgroundDetails, PrimaryClasses } from './types';
+import { BARBARIAN } from './components/class/barbarian/constants';
+import { FIGHTER } from './components/class/fighter/constants';
 
 export enum CLASSES {
 	CLERIC = 'cleric',
@@ -15,6 +17,8 @@ export enum CLASSES {
 }
 
 export const ClassOptions = Object.values(CLASSES);
+
+export const playableClasses = [BARBARIAN, FIGHTER];
 
 export const SubClassOptions: Record<PrimaryClasses, SubClass[]> = {
 	cleric: [{ title: 'life domain' }, { title: 'light domain' }, { title: 'trickery domain' }],

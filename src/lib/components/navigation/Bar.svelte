@@ -1,9 +1,9 @@
 <script lang="ts">
-	// Todo
+	import { activeTab } from '$lib/stores/app';
 	const links = ['home', 'class', 'race', 'abilities', 'skills', 'equipment'];
 
 	let active = 0;
-
+	$: $activeTab = active;
 	function handleClick(event) {
 		active = event.target.id;
 		const offset = -56 - 112 * active;

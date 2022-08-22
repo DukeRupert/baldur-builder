@@ -16,6 +16,10 @@ export const FIGHTER: FighterClass = {
 	name: 'fighter',
 	description:
 		'Fighters have mastered the art of combat, wielding weapons with unmatched skill and wearing armour like a second skin.',
+	image: {
+		src: '/icons/class/fighter_class_icon_150px.png',
+		alt: 'fighter sword logo'
+	},
 	hp: 10,
 	savingThrows: ['strength', 'constitution'],
 	armorProfs: ['light', 'medium', 'heavy', 'shield'],

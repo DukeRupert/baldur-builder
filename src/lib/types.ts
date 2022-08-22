@@ -47,6 +47,7 @@ export interface playableRace {
 export interface playerClass {
 	name: PrimaryClasses;
 	description: string;
+	image: Image;
 	hp: number;
 	savingThrows: Ability[];
 	armorProfs: ArmorProficiency[];

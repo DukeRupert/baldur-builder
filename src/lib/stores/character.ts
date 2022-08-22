@@ -2,6 +2,18 @@ import { writable, derived, type Writable, type Readable } from 'svelte/store';
 import { RACE, BASE_ABILITY_SCORE, MAX_BASE_ABILITY_SCORE, AbilityOptions } from '$lib/constants';
 import type { PrimaryClasses, Race, Background, Ability, Feat } from '$lib/types';
 
+interface playerClass {
+	name?: string;
+	hp?: number;
+	level?: number;
+	race?: Race;
+	background?: Background;
+	abilities: [{ ability: Ability; value: number }];
+	class?: [{ primaryClass: PrimaryClasses; level: number; subclass?: string; feats?: Feat[] }];
+}
+
+export const characters: Writable<Array<playerClass>> = writable([]);
+
 export const firstFeat: Writable<Feat> = writable({
 	id: 1,
 	name: 'ability improvement',

@@ -55,7 +55,11 @@ export const WILDHEART = {
 export const BARBARIAN: BarbarianClass = {
 	name: 'barbarian',
 	description:
-		'The strong embrace the wild that hides inside - keen instincts, primal physicalityy, and most of all, an unbridled, unquenchable rage.',
+		'The strong embrace the wild that hides inside - keen instincts, primal physicality, and most of all, an unbridled, unquenchable rage.',
+	image: {
+		src: '/icons/class/barbarian_class_icon_150px.png',
+		alt: 'barbarian axe icon'
+	},
 	hp: 12,
 	savingThrows: ['strength', 'constitution'],
 	armorProfs: ['light', 'medium', 'shield'],

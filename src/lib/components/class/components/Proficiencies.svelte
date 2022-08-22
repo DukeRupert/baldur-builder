@@ -10,14 +10,14 @@
 	<div class="card-body">
 		<div tabindex="0" class="collapse collapse-arrow bg-base-100 rounded-box">
 			<div class="tooltip tooltip-bottom" data-tip={feature.description}>
-				<div class="collapse-title text-left text-xl font-medium capitalize">{feature.name}</div>
+				<div class="collapse-title text-left text-lg font-medium capitalize">{feature.name}</div>
 			</div>
 			<div class="collapse-content">
 				{#each weaponProfs as item}
-					<p>{item} weapons</p>
+					<p class="capitalize">{item} weapons</p>
 				{/each}
 				{#each armorProfs as item}
-					<p>{item} armor</p>
+					<p class="capitalize">{item} armor</p>
 				{/each}
 			</div>
 		</div>
